@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -257,4 +258,265 @@
     <div class="gallery-caption" id="popupCaption"></div>
 </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Galeri Visual | Pengarasan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS Identik */
+        :root { --primary: #2563eb; --dark: #0f172a; --accent: #f59e0b; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .topbar { background: var(--dark); color: white; font-size: 12px; padding: 10px 0; }
+        .navbar { background: var(--dark); padding: 15px 0; }
+        .nav-link { font-weight: 700; color: white !important; text-transform: uppercase; font-size: 14px; margin: 0 12px; }
+        .nav-link.active { color: var(--accent) !important; }
+        .btn-layanan { background: var(--primary); color: white; border-radius: 50px; padding: 10px 30px; font-weight: 800; text-decoration: none; }
+
+        .gallery-container img { border-radius: 20px; transition: 0.4s; cursor: pointer; height: 250px; object-fit: cover; width: 100%; }
+        .gallery-container img:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        /* ===== GALERI GRID (BENTO STYLE) ===== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    gap: 20px;
+}
+
+/* Item dasar */
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Gambar */
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Hover efek */
+.bento-item:hover img {
+    transform: scale(1.12);
+}
+
+/* Overlay teks */
+.bento-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.2),
+        transparent
+    );
+    color: #fff;
+}
+
+/* Ukuran besar (bento-big) */
+.bento-big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Judul */
+.bento-content h4,
+.bento-content h5 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Deskripsi kecil */
+.bento-content p {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+/* Cursor klik */
+.gallery-img {
+    cursor: pointer;
+}
+
+/* Popup background */
+.gallery-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* Gambar popup */
+.gallery-popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Caption */
+.gallery-caption {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Tombol close */
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Animasi */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .bento-big {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="container d-flex justify-content-between">
+            <div><i class="fa-solid fa-location-dot text-accent me-2"></i> Kecamatan Bantarkawung, Jawa Tengah</div>
+            
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" width="45" alt="Logo">
+                <div class="ms-3 lh-1">
+                    <span class="fw-bold d-block h5 mb-0 text-white">PENGARASAN</span>
+                    
+                </div>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none text-white" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="identitas.html">Identitas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pemerintahan.html">Pemerintahan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri Visual</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-4">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold Montserrat">PESONA VISUAL</h1>
+            <p class="text-muted">Dokumentasi keindahan alam dan kegiatan masyarakat Desa Pengarasan</p>
+        </div>
+        
+        
+    <section id="galeri" class="py-5 bg-white">
+        <div class="container py-5">
+            
+            
+            <div class="bento-grid">
+                <div class="bento-item bento-big animate__animated animate__fadeIn">
+                    <img src="img/baper.png" alt="Wisata BAPER" class="gallery-img">
+                    <div class="bento-content">
+                        <h4 class="fw-bold">Wisata BAPER</h4>
+                        <p class="mb-0 small opacity-75">Destinasi unggulan dengan udara segar pedesaan.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-big animate__animated animate__fadeIn">
+                    <img src="img/budaya.png" alt="Budaya Lokal" class="gallery-img">
+                    <div class="bento-content">
+                        <h4 class="fw-bold">Budaya Lokal</h4>
+                        <p class="mb-0 small opacity-75">Kegiatan Ejol/Tukar Takir di Bulan Puasa.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-big animate__animated animate__fadeIn">
+                    <img src="img/masjid.png" alt="Masjid Jami Nahdlatul Muslimin" class="gallery-img">
+                    <div class="bento-content">
+                        <h4 class="fw-bold">Masjid Jami Nahdlatul Muslimin Pengarasan</h4>
+                        
+                    </div>
+                </div>
+                <div class="bento-item bento-big animate__animated animate__fadeIn">
+                    <img src="img/pertanian.png" alt="Agriculture" class="gallery-img">
+                    <div class="bento-content">
+                        <h5 class="fw-bold">Pertanian & Kependudukan </h5>
+                        
+                    </div>
+                </div>
+                <div class="bento-item bento-big animate__animated animate__fadeIn">
+                    <img src="img/kegiatanpemuda.png" alt="kegiatan" class="gallery-img">
+                    <div class="bento-content">
+                        <h5 class="fw-bold">Kegiatan Pemuda</h5>
+                    </div>
+                </div>
+                <div class="bento-item bento-big animate__animated animate__fadeIn">
+                    <img src="" alt="kegiatan" class="gallery-img">
+                    <div class="bento-content">
+                        <h5 class="fw-bold">Balai Desa</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    </div>
+    <script src="js/gallery-popup.js"></script>
+        <!-- Popup Galeri -->
+<div class="gallery-popup" id="galleryPopup">
+    <span class="gallery-close" id="galleryClose">&times;</span>
+    <img id="popupImage" src="" alt="">
+    <div class="gallery-caption" id="popupCaption"></div>
+</div>
+</body>
+>>>>>>> d7c311c (update tampilan baru)
 </html>
