@@ -1,0 +1,158 @@
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --accent: #2548d6;
+            --dark: #0f172a;
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; background: #ffffff; }
+
+        /* --- HEADER KONSISTEN SESUAI GAMBAR --- */
+        .topbar { background: var(--dark); color: white; font-size: 12px; padding: 10px 0; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .navbar { background: var(--dark); padding: 15px 0; transition: 0.4s; }
+        .nav-link { font-weight: 700; color: white !important; font-size: 14px; text-transform: uppercase; margin: 0 12px; letter-spacing: 0.5px; }
+        .nav-link.active { color: var(--accent) !important; }
+        .btn-layanan { background: var(--primary); color: white; border-radius: 50px; padding: 10px 30px; font-weight: 800; text-transform: uppercase; font-size: 14px; border: none; transition: 0.3s; text-decoration: none; display: inline-block; }
+        .btn-layanan:hover { background: #1d4ed8; transform: translateY(-2px); color: white; }
+
+        /* --- CONTENT STYLES --- */
+        .page-banner { background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80'); padding: 100px 0 60px; color: white; text-align: center; border-radius: 0 0 50px 50px; }
+        
+.page-banner h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-banner .subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    opacity: 0.8;
+}
+
+.banner-text {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    opacity: 0.9;
+}
+
+.banner-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.border-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 25px 0;
+}
+
+.border-list li {
+    padding: 10px 15px;
+    border-left: 4px solid #2563eb;
+    background: rgba(255,255,255,0.05);
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.border-list strong {
+    color: #93c5fd;
+}
+        .section-title { font-family: 'Montserrat', sans-serif; font-weight: 800; margin-bottom: 40px; position: relative; }
+        .card-custom { border: none; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); padding: 40px; background: white; transition: 0.3s; }
+        .timeline-box { border-left: 3px solid var(--primary); padding-left: 30px; position: relative; margin-bottom: 40px; }
+        .timeline-box::before { content: ''; position: absolute; width: 16px; height: 16px; background: var(--accent); border-radius: 50%; left: -10px; top: 5px; }
+        .org-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid #f8fafc; margin-bottom: 20px; }
+        .footer { background: #050a15; color: #94a3b8; padding: 60px 0 30px; margin-top: 80px; }
+        /* Styling Utama Card */
+.card-custom {
+    background: #ffffff;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px; /* Sudut kotak card */
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Efek Hover */
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* FOTO KOTAK */
+.card-custom img {
+    width: 100%;       /* Mengikuti lebar container card */
+    max-width: 120px;  /* Batas lebar maksimal foto */
+    aspect-ratio: 1/1; /* Memastikan foto tetap kotak sempurna (1:1) */
+    object-fit: cover; /* Agar foto tidak gepeng */
+    border-radius: 4px; /* Kasih sedikit lengkungan di pojok foto agar tidak terlalu tajam */
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+}
+
+/* Pengaturan Teks */
+.card-custom h5, .card-custom h6 {
+    color: #2c3e50;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.text-primary.small {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.5px;
+}
+
+.extra-small {
+    font-size: 0.65rem !important;
+    font-weight: 600;
+    color: #6c757d;
+}
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Paragraf Visi */
+.card-custom p {
+    font-size: 1.05rem;        /* jangan terlalu besar */
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;       /* biar rata kiri-kanan */
+}
+
+/* List Misi */
+.card-custom ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Item Misi */
+.card-custom ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: #444;
+    text-align: justify;
+}
+
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .col-md-2 {
+        width: 50%; /* 2 kolom di HP */
+    }
+    .card-custom img {
+        max-width: 80px; /* Foto lebih kecil di HP */
+    }
+}

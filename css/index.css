@@ -1,0 +1,367 @@
+   :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --accent: #2548d6;
+            --dark: #0f172a;
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #e91919;
+            color: #334155;
+            overflow-x: hidden;
+        }
+
+        /* --- 1. TOPBAR & NAVBAR --- */
+        .topbar {
+            background: var(--dark);
+            color: rgb(26, 22, 22);
+            font-size: 12px;
+            padding: 8px 0;
+            font-weight: 500;
+        }
+
+        .navbar {
+            padding: 20px 0;
+            transition: 0.4s all;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            padding: 12px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .nav-link {
+            font-weight: 700;
+            color: rgb(255, 255, 255) !important;
+            font-size: 14px;
+            margin: 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--dark) !important;
+        }
+
+        /* --- 2. CINEMA HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.4);
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-weight: 800;
+            transition: 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Memberi warna pada tombol accent (Jelajahi Potensi) */
+.btn-accent {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #000 !important; /* Warna teks hitam agar kontras dengan kuning */
+}
+
+.btn-accent:hover {
+    background-color: #d98906 !important; /* Warna sedikit lebih gelap saat disentuh */
+    border-color: #d98906 !important;
+    color: #fff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Mempercantik tombol Outline (Tonton Video) */
+.btn-outline-light {
+    border-width: 2px;
+}
+
+.btn-outline-light:hover {
+    background-color: white !important;
+    color: var(--dark) !important;
+    transform: translateY(-3px);
+}
+        /* --- 3. BENTO POTENTIAL GRID --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 220px);
+            gap: 20px;
+        }
+        .bento-big {
+            grid-column: span 2;
+            grid-row: span 2;
+            max-height: 460px; /* batas tinggi biar gak kelewatan */
+        }
+
+
+        .bento-item {
+            position: relative;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        .bento-item img {
+            width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease;
+        }
+
+        .bento-item:hover img { transform: scale(1.1); }
+
+        .bento-content {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: rgb(255, 255, 255);
+        }
+
+        .bento-big { grid-column: span 2; grid-row: span 2; }
+
+        /* --- 4. NEWS CARDS --- */
+        .news-card {
+            border: none;
+            border-radius: 30px;
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .news-card:hover { transform: translateY(-10px); }
+
+        .news-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px 30px 0 0;
+        }
+
+        /* --- 5. STATS COUNTER --- */
+        .stats-section {
+            background: var(--dark);
+            padding: 80px 0;
+            border-radius: 80px 80px 0 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-card {
+            color: white;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        /* --- 6. FOOTER DEEP NAVY --- */
+        .footer {
+            background: #050a15;
+            color: #94a3b8;
+            padding: 100px 0 40px;
+        }
+
+        .footer-logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer h5 { color: white; font-weight: 700; margin-bottom: 25px; }
+
+        .footer-link {
+            display: block;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover { color: var(--primary); padding-left: 10px; }
+        /* Cursor klik */
+.gallery-img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* Popup background */
+.gallery-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* Gambar popup */
+.gallery-popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 14px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Caption */
+.gallery-caption {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0.85;
+}
+
+/* Tombol close */
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+.news-wrapper {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 30px;
+}
+
+.news-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.news-title {
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.news-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 5px;
+    height: 70%;
+    background: #2563eb;
+    border-radius: 4px;
+}
+
+.news-card p {
+    line-height: 1.8;
+    text-align: justify;
+    color: #334155;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.data-grid div {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.list-check {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-check li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.list-check li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+}
+
+.monografi-image-wrapper {
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.monografi-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animasi */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 992px) {
+            .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+            .bento-big { grid-column: span 1; grid-row: span 1; height: 350px; }
+            .hero-title { font-size: 3rem; }
+        }
